@@ -227,9 +227,9 @@ class __HeaderState extends State<_Header> {
 class FlutterLogin extends StatefulWidget {
   FlutterLogin(
       {Key? key,
-      required this.onSignup,
+      // required this.onSignup,
       required this.onLogin,
-      required this.onRecoverPassword,
+      // required this.onRecoverPassword,
       this.title,
       this.logo,
       this.messages,
@@ -252,7 +252,7 @@ class FlutterLogin extends StatefulWidget {
       : super(key: key);
 
   /// Called when the user hit the submit button when in sign up mode
-  final AuthCallback onSignup;
+  // final AuthCallback onSignup;
 
   /// Called when the user hit the submit button when in login mode
   final AuthCallback onLogin;
@@ -267,7 +267,7 @@ class FlutterLogin extends StatefulWidget {
   final List<LoginProvider> loginProviders;
 
   /// Called when the user hit the submit button when in recover password mode
-  final RecoverCallback onRecoverPassword;
+  // final RecoverCallback onRecoverPassword;
 
   /// The large text above the login [Card], usually the app or company name
   final String? title;
@@ -332,15 +332,15 @@ class FlutterLogin extends StatefulWidget {
   final bool navigateBackAfterRecovery;
 
   static final FormFieldValidator<String> defaultEmailValidator = (value) {
-    if (value!.isEmpty || !Regex.email.hasMatch(value)) {
-      return 'Invalid email!';
+    if (value!.isEmpty) {
+      return '學號不能為空！';
     }
     return null;
   };
 
   static final FormFieldValidator<String> defaultPasswordValidator = (value) {
-    if (value!.isEmpty || value.length <= 2) {
-      return 'Password is too short!';
+    if (value!.isEmpty) {
+      return '密碼不能為空！';
     }
     return null;
   };
@@ -632,8 +632,8 @@ class _FlutterLoginState extends State<FlutterLogin>
         ChangeNotifierProvider(
           create: (context) => Auth(
             onLogin: widget.onLogin,
-            onSignup: widget.onSignup,
-            onRecoverPassword: widget.onRecoverPassword,
+            // onSignup: widget.onSignup,
+            // onRecoverPassword: widget.onRecoverPassword,
             loginProviders: widget.loginProviders,
           ),
         ),
