@@ -151,7 +151,7 @@ class __HeaderState extends State<_Header> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    const gap = 3.0;
+    const gap = 1.0;
     final logoHeight = min(
         (widget.height - MediaQuery.of(context).padding.top) -
             _titleHeight -
