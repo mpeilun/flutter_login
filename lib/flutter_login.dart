@@ -151,7 +151,7 @@ class __HeaderState extends State<_Header> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    const gap = 1.0;
+    const gap = 5.0;
     final logoHeight = min(
         (widget.height - MediaQuery.of(context).padding.top) -
             _titleHeight -
@@ -210,7 +210,7 @@ class __HeaderState extends State<_Header> {
                 fadeDirection: FadeDirection.topToBottom,
                 child: logo,
               ),
-            SizedBox(height: gap),
+            SizedBox(height: 3.0),
             FadeIn(
               controller: widget.titleController,
               offset: .5,
