@@ -210,7 +210,7 @@ class __HeaderState extends State<_Header> {
                 fadeDirection: FadeDirection.topToBottom,
                 child: logo,
               ),
-            SizedBox(height: 3.0),
+            SizedBox(height: gap),
             FadeIn(
               controller: widget.titleController,
               offset: .5,
@@ -601,7 +601,7 @@ class _FlutterLoginState extends State<FlutterLogin>
     final loginTheme = widget.theme ?? LoginTheme();
     final theme = _mergeTheme(theme: Theme.of(context), loginTheme: loginTheme);
     final deviceSize = MediaQuery.of(context).size;
-    const headerMargin = 15;
+    const headerMargin = 10;
     const cardInitialHeight = 200;
     final cardTopPosition = deviceSize.height / 2 - cardInitialHeight / 2;
     final headerHeight = cardTopPosition - headerMargin;
