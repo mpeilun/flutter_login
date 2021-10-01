@@ -679,7 +679,7 @@ class _FlutterLoginState extends State<FlutterLogin>
                       ),
                     ),
                     Positioned(
-                      top: cardTopPosition - headerHeight - headerMargin + 20.0,
+                      top: cardTopPosition - headerHeight - headerMargin,
                       child: _buildHeader(headerHeight, loginTheme),
                     ),
                     Positioned.fill(
