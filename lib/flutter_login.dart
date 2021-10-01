@@ -654,7 +654,7 @@ class _FlutterLoginState extends State<FlutterLogin>
               child: Theme(
                 data: theme,
                 child: Stack(
-                  alignment: Alignment.bottomCenter,
+                  alignment: Alignment.center,
                   children: <Widget>[
                     Positioned(
                       child: AuthCard(
@@ -679,7 +679,7 @@ class _FlutterLoginState extends State<FlutterLogin>
                       ),
                     ),
                     Positioned(
-                      top: cardTopPosition - headerHeight - headerMargin,
+                      top: cardTopPosition - headerHeight - headerMargin + 20.0,
                       child: _buildHeader(headerHeight, loginTheme),
                     ),
                     Positioned.fill(
