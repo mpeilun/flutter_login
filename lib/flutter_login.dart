@@ -654,7 +654,7 @@ class _FlutterLoginState extends State<FlutterLogin>
               child: Theme(
                 data: theme,
                 child: Stack(
-                  alignment: Alignment.center,
+                  alignment: Alignment.bottomCenter,
                   children: <Widget>[
                     Positioned(
                       child: AuthCard(
